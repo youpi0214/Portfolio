@@ -4,12 +4,12 @@
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
       <!-- Items -->
       <div
-          v-for="(image, index) in images"
+          v-for="(media, index) in mediaContent"
           :key="index"
           class="absolute inset-0 flex items-center justify-center transition-opacity duration-500"
           :class="{ 'opacity-0': currentSlide !== index, 'opacity-100': currentSlide === index }"
       >
-        <img :src="image" alt="Slide" class="object-contain w-full h-full cursor-pointer" @click="showFullscreen"/>
+        <img :src="media.url" alt="Slide" class="object-contain w-full h-full cursor-pointer" @click="showFullscreen"/>
         <!-- Fullscreen Overlay -->
         <div
             v-if="isFullscreen"
@@ -17,10 +17,16 @@
             @click="closeFullscreen"
         >
           <img
-              :src="image"
+              v-if="media.isImage"
+              :src="media.url"
               alt="Full-size Image"
               class="rounded max-h-[90%] max-w-[90%]"
           />
+
+          <video v-else class="w-full" autoplay controls>
+            <source :src="media.url" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </div>
@@ -28,7 +34,7 @@
     <!-- Slider indicators -->
     <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
       <button
-          v-for="(_, index) in images"
+          v-for="(_, index) in mediaContent"
           :key="index"
           type="button"
           class="w-3 h-3 rounded-full bg-primary"
@@ -42,14 +48,14 @@
     <button
         type="button"
         class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        @click="prevSlide(images)"
+        @click="prevSlide(mediaContent)"
     >
       <IconPrevious/>
     </button>
     <button
         type="button"
         class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        @click="nextSlide(images)"
+        @click="nextSlide(mediaContent)"
     >
       <IconNext/>
     </button>
@@ -61,8 +67,9 @@
 import {ref} from "vue";
 import IconPrevious from "@/components/icons/IconPrevious.vue";
 import IconNext from "@/components/icons/IconNext.vue";
+import type {MediaContent} from "@/components/projects/project_script.ts";
 
-defineProps<{ images: string[] }>();
+defineProps<{ mediaContent: MediaContent[] }>();
 const isFullscreen = ref(false);
 const currentSlide = ref<number>(0);
 
@@ -79,12 +86,12 @@ const goToSlide = (index: number) => {
   currentSlide.value = index;
 };
 
-const nextSlide = (images: string[]) => {
-  currentSlide.value = (currentSlide.value + 1) % images.length;
+const nextSlide = (mediaContent: MediaContent[]) => {
+  currentSlide.value = (currentSlide.value + 1) % mediaContent.length;
 };
 
-const prevSlide = (images: string[]) => {
-  currentSlide.value = (currentSlide.value - 1 + images.length) % images.length;
+const prevSlide = (mediaContent: MediaContent[]) => {
+  currentSlide.value = (currentSlide.value - 1 + mediaContent.length) % mediaContent.length;
 };
 </script>
 

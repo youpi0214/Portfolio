@@ -22,6 +22,7 @@
     <section id="contact">
       <contact-us-view></contact-us-view>
     </section>
+    <portfolio-footer></portfolio-footer>
   </div>
 </template>
 
@@ -32,4 +33,5 @@ import Projects from "@/views/ProjectsView.vue";
 import ContactUsView from "@/views/ContactView.vue";
 import SkillsView from "@/views/SkillsView.vue";
 import StarrySkyBackground from "@/components/StarrySkyBackground.vue";
+import PortfolioFooter from "@/components/PortfolioFooter.vue";
 </script>

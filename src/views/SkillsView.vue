@@ -74,15 +74,15 @@ const hardSkills = [
   {name: "Java", image: "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg"},
   {name: "Python", image: "https://cdn-icons-png.flaticon.com/512/5968/5968350.png"},
   {name: "MySQL", image: "https://cdn-icons-png.flaticon.com/512/528/528260.png"},
-  {name: "SQLite", image: "https://upload.wikimedia.org/wikipedia/commons/3/38/SQLite370.svg"}, // Corrected SQLite logo
+  {name: "SQLite", image: "https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg"}, // Corrected SQLite logo
   {name: "MongoDB", image: "https://www.svgrepo.com/show/331488/mongodb.svg"},
-  {name: "Vue.js", image: "https://cdn-icons-png.flaticon.com/512/1183/1183672.png"},
+  {name: "Vue.js", image: "https://www.vectorlogo.zone/logos/vuejs/vuejs-icon.svg"},
   {name: "Tailwind", image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"},
   {name: "Bootstrap", image: "https://cdn-icons-png.flaticon.com/512/5968/5968672.png"},
   {name: "TypeScript", image: "https://cdn-icons-png.flaticon.com/512/5968/5968381.png"},
   {name: "JavaScript", image: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png"},
   {name: "Spring Boot", image: "https://www.vectorlogo.zone/logos/springio/springio-ar21.svg"},
-  {name: "Git", image: "https://cdn-icons-png.flaticon.com/512/2111/2111288.png"},
+  {name: "Git", image: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"},
   {name: "Docker", image: "https://cdn-icons-png.flaticon.com/512/919/919853.png"},
   {name: "Postman", image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"},
 ];

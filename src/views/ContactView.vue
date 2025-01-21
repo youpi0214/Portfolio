@@ -1,7 +1,7 @@
 <template>
-  <about-me-content class="pt-32"></about-me-content>
+  <h2 class="text-3xl font-bold text-center text-primary-500 mb-12">
+    Contact Me
+  </h2>
 </template>
 
-<script setup lang="ts">
-import AboutMeContent from "@/components/AboutMeContent.vue";
-</script>
+<script setup lang="ts"></script>

@@ -17,7 +17,7 @@
               v-for="(project, index) in projects"
               :key="project.id"
               @click="selectProject(project)"
-              class="cursor-pointer border-2 rounded-lg"
+              class="cursor-pointer border-2 rounded-lg relative w-full h-full flex items-center justify-center"
               :class="{
               'border-blue-600': project.id === selectedProject.id,
               'border-transparent': project.id !== selectedProject.id,
@@ -26,7 +26,7 @@
             <img
                 :src="project.thumbnail"
                 :alt="project.title"
-                class="h-auto max-w-full rounded-lg"
+                class="max-h-full max-w-full object-contain rounded-lg"
             />
           </div>
         </div>
@@ -36,23 +36,22 @@
 </template>
 
 <script setup lang="ts">
-import {ref} from "vue";
+import {onMounted, ref} from "vue";
 import ProjectDisplay from "@/components/projects/ProjectDisplay.vue";
-import type {Project} from "@/components/projects/project_script.ts";
-import {ufoodImages} from "@/components/projects/project_script.ts";
-
+import {type Project, tictactoeMediaContent, tictactoeTechStack, ufoodTechStack} from "@/components/projects/project_script.ts";
+import {ufoodMediaContent} from "@/components/projects/project_script.ts";
 
 const projects = ref<Project[]>([
   {
     id: 1,
     title: "UFood",
-    technologies: [],
+    technologies: ufoodTechStack,
     description: "UFood is a collaborative web application designed to help users discover restaurants," +
         " share favorites with friends, and track dining experiences. The application includes features like restaurant search," +
         " user profiles, dynamic filtering, and interactive maps.",
-    thumbnail: ufoodImages[0],
-    images: ufoodImages,
-    github: "null",
+    thumbnail: ufoodMediaContent[0].url,
+    mediaContent: ufoodMediaContent,
+    github: "https://github.com/youpi0214/ufood-h2024",
     demo: "https://ufood-h2024.vercel.app/",
   },
   {
@@ -61,7 +60,7 @@ const projects = ref<Project[]>([
     technologies: [],
     description: "null",
     thumbnail: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg",
-    images: [],
+    mediaContent: [],
     github: "null",
     demo: "null",
   },
@@ -71,7 +70,7 @@ const projects = ref<Project[]>([
     technologies: [],
     description: "null",
     thumbnail: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
-    images: [],
+    mediaContent: [],
     github: "null",
     demo: "null",
   },
@@ -81,19 +80,19 @@ const projects = ref<Project[]>([
     technologies: [],
     description: "null",
     thumbnail: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
-    images: [],
+    mediaContent: [],
     github: "null",
     demo: "null",
   },
   {
     id: 5,
     title: "Tic-Tac-Toe",
-    technologies: [],
-    description: "null",
-    thumbnail: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg",
-    images: [],
-    github: "null",
-    demo: "null",
+    technologies: tictactoeTechStack,
+    description: "A simple Tic-Tac-Toe game built with 4 different modes : Random, Easy, AI and 2 Players.",
+    thumbnail: tictactoeMediaContent[0].url,
+    mediaContent: tictactoeMediaContent,
+    github: "https://github.com/youpi0214/TicTacToe",
+    demo: "https://youtube.com/shorts/RRJgkREOxO8?feature=share",
   },
 ]);
 
