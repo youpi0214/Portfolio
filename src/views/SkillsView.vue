@@ -1,5 +1,8 @@
 <template>
-  <div class="">
+  <div class="flex justify-center pb-20">
+    <h2 class="text-3xl font-extrabold text-primary">Skills</h2>
+  </div>
+  <div>
     <!-- Tabs Navigation -->
     <div class="mb-4 flex justify-center">
       <ul
