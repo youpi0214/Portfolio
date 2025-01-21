@@ -39,12 +39,17 @@
   </section>
 </template>
 
-
 <script setup lang="ts">
 import ufood from "@/assets/pictures/projects/ufood.png";
 import { ref } from "vue";
 
-const projects = ref([
+interface Project {
+  id: number;
+  title: string;
+  image: string;
+}
+
+const projects = ref<Project[]>([
   {
     id: 1,
     title: "Ufood",
@@ -72,10 +77,9 @@ const projects = ref([
   },
 ]);
 
-const selectedProject = ref(projects.value[0]);
+const selectedProject = ref<Project>(projects.value[0]);
 
-const selectProject = (project) => {
+const selectProject = (project: Project) => {
   selectedProject.value = project;
 };
 </script>
-
