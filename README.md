@@ -1,4 +1,4 @@
-# Web App Template
+# Portfolio Website
 
 This template should help get you started developing with Vue 3 in Vite.
 The template utilizes Flowbite-Vue, a Vue 3 framework built on top of Flowbite and powered by Tailwind CSS. Both Flowbite and Tailwind CSS are also included in the project.
