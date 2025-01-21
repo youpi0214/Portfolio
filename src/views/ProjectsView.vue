@@ -3,6 +3,6 @@
 </template>
 
 <script setup lang="ts">
-import ProjectsContent from "@/components/ProjectsContent.vue";
+import ProjectsContent from "@/components/projects/ProjectsContent.vue";
 </script>
 
