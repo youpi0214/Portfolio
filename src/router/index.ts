@@ -9,19 +9,14 @@ const routes = [
     component: HomeView,
   },
   {
-    path: '/services',
-    name: 'services',
-    component: () => import('../views/ServicesView.vue'),
+    path: '/projects',
+    name: 'projects',
+    component: () => import('../views/ProjectsView.vue'),
   },
   {
     path: '/contact',
     name: 'contact',
-    component: () => import('../views/ContactUsView.vue'),
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: () => import('../views/AboutView.vue'),
+    component: () => import('../views/ContactView.vue'),
   },
   {
     path: '/:pathMatch(.*)*',
