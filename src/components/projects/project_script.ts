@@ -11,6 +11,13 @@ import home_restau_search from "@/assets/pictures/projects/ufood/home_restau_sea
 import home_user_search from "@/assets/pictures/projects/ufood/home_user_search.png";
 import tictactoe_1 from "@/assets/pictures/projects/tic_tac_toe/tictactoe_1.png";
 import tictactoe_2 from "@/assets/pictures/projects/tic_tac_toe/tictactoe_2.png";
+import solidium_about_us from "@/assets/pictures/projects/solidium/solidium_about_us.png";
+import solidium_contact_us from "@/assets/pictures/projects/solidium/solidium_contact_us.png";
+import solidium_home from "@/assets/pictures/projects/solidium/solidium_home.png";
+import solidium_services from "@/assets/pictures/projects/solidium/solidium_services.png";
+import solidium_services_mobile from "@/assets/pictures/projects/solidium/solidium_services_mobile.png";
+import solidium_contact_us_mobile from "@/assets/pictures/projects/solidium/solidium_contact_us_mobile.png";
+import solidium_home_mobile from "@/assets/pictures/projects/solidium/solidium_home_mobile.png";
 
 export interface MediaContent {
     url: string;
@@ -34,6 +41,8 @@ const bootstrap: string = "https://cdn-icons-png.flaticon.com/512/5968/5968672.p
 const javascript: string = "https://cdn-icons-png.flaticon.com/512/5968/5968292.png";
 const java: string = "https://www.vectorlogo.zone/logos/java/java-vertical.svg";
 const javafx: string = "https://avatars.githubusercontent.com/u/43116912";
+const tailwindcss: string = "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg";
+const typescript: string = "https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg";
 
 export const ufoodMediaContent: MediaContent[] = [
     {url: ufood_home, isImage: true},
@@ -69,4 +78,42 @@ export const tictactoeMediaContent: MediaContent[] = [
 export const tictactoeTechStack: string[] = [
     java,
     javafx
+]
+
+
+export const solidiumMediaContent: MediaContent[] = [
+    {
+        url: solidium_home,
+        isImage: true
+    },
+    {
+        url: solidium_services,
+        isImage: true
+    },
+    {
+        url: solidium_about_us,
+        isImage: true
+    },
+    {
+        url: solidium_contact_us,
+        isImage: true
+    },
+    {
+        url: solidium_home_mobile,
+        isImage: true
+    },
+    {
+        url: solidium_services_mobile,
+        isImage: true
+    },
+    {
+        url: solidium_contact_us_mobile,
+        isImage: true
+    }
+]
+
+export const solidiumTechStack: string[] = [
+    vuejs,
+    typescript,
+    tailwindcss
 ]

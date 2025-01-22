@@ -38,7 +38,7 @@
 <script setup lang="ts">
 import {onMounted, ref} from "vue";
 import ProjectDisplay from "@/components/projects/ProjectDisplay.vue";
-import {type Project, tictactoeMediaContent, tictactoeTechStack, ufoodTechStack} from "@/components/projects/project_script.ts";
+import {type Project, solidiumMediaContent, solidiumTechStack, tictactoeMediaContent, tictactoeTechStack, ufoodTechStack} from "@/components/projects/project_script.ts";
 import {ufoodMediaContent} from "@/components/projects/project_script.ts";
 
 const projects = ref<Project[]>([
@@ -77,12 +77,12 @@ const projects = ref<Project[]>([
   {
     id: 4,
     title: "Solidium",
-    technologies: [],
-    description: "null",
-    thumbnail: "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
-    mediaContent: [],
-    github: "null",
-    demo: "null",
+    technologies: solidiumTechStack,
+    description: "A Landing Page for a small welding business.",
+    thumbnail: solidiumMediaContent[0].url,
+    mediaContent: solidiumMediaContent,
+    github: "https://github.com/youpi0214/solidium",
+    demo: "https://solidium.ca/",
   },
   {
     id: 5,
